@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "this is the real time collaboration app",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:server": "node index.js",
+    "start:client": "npm start --prefix ../client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ratan",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
